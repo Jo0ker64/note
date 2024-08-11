@@ -28,22 +28,22 @@ function App() {
 
   return (
     <div className="container mt-5">
-      <h1 className="mb-4">My Notes</h1>
+      <h1 className="mb-4">Mes notes</h1>
       <div className="input-group mb-3">
         <input
           type="text"
           className="form-control"
           value={newNote}
           onChange={(e) => setNewNote(e.target.value)}
-          placeholder="Write your note here..."
+          placeholder="Ecrire une note..."
         />
-        <button className="btn btn-primary" onClick={handleAddNote}>Add Note</button>
+        <button className="btn btn-primary" onClick={handleAddNote}>Ajouter</button>
       </div>
       <ul className="list-group">
         {notes.map((note, index) => (
           <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
             {note}
-            <button className="btn btn-danger btn-sm" onClick={() => handleDeleteNote(index)}>Delete</button>
+            <button className="btn btn-danger btn-sm" onClick={() => handleDeleteNote(index)}>Supprimer</button>
           </li>
         ))}
       </ul>
